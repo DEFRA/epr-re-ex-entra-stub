@@ -6,6 +6,10 @@ node_modules
 coverage
 .npm/
 npm-debug.log
+.public
+.cache
+.envrc
+tsconfig.tsbuildinfo
 
 # Prototype files/folders
 .tmp/

@@ -1,8 +1,0 @@
-{
-  "serviceName": "epr-re-ex-entra-stub",
-  "plugins": {
-    "govuk-frontend": {
-      "rebrand": true
-    }
-  }
-}

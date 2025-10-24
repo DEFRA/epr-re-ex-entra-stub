@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  epr-re-ex-entra-stub:
+    build: ./
+    ports:
+      - '3010:3010'
+    env_file:
+      - 'compose/aws.env'
+    environment:
+      NODE_ENV: development
+      USE_SINGLE_INSTANCE_CACHE: true
+    networks:
+      - cdp-tenant
+
+volumes:
+  mongodb-data:
+
+networks:
+  cdp-tenant:
+    driver: bridge
+    name: cdp-tenant
