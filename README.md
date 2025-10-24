@@ -2,7 +2,7 @@
 
 Entra ID stub service providing OAuth 2.0/OIDC endpoints for RE EX EPR testing and development.
 
-Based on [epr-re-ex-entra-stub](https://github.com/DEFRA/epr-re-ex-entra-stub) with some changes to support RE EX EPR.
+Based on [fg-entra-stub-frontend](https://github.com/DEFRA/fg-entra-stub-frontend) with some changes to support RE EX EPR.
 
 - [Requirements](#requirements)
 - [Quick Start](#quick-start)
