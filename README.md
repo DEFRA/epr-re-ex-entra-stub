@@ -61,6 +61,7 @@ Keys used to sign and verify tokens are defined in the codebase:
 ```
 STUB_EXTERNAL_URL = URL that is used to redirect to the Stub UI
 STUB_INTERNAL_URL = URL that is used by calling service directly (via backend / HTTP calls)
+CALLBACK_BASE_URL = Base URL for the callback (i.e. the calling service)
 ```
 
 Override them as needed (e.g. Docker, or in environments).
