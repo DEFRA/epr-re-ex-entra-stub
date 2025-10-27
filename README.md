@@ -56,6 +56,15 @@ Keys used to sign and verify tokens are defined in the codebase:
 - `POST /sign` - Token signing endpoint
 - `GET /.well-known/openid-configuration` - OIDC discovery endpoint
 
+## Environment variables (For Docker tests)
+
+```
+STUB_EXTERNAL_URL = URL that is used to redirect to the Stub UI
+STUB_INTERNAL_URL = URL that is used by calling service directly (via backend / HTTP calls)
+```
+
+Override them as needed (e.g. Docker, or in environments).
+
 ## Generate a token
 
 ```sh
