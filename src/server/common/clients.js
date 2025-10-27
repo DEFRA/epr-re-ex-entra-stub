@@ -1,8 +1,10 @@
+const callbackBaseUrl = process.env.CALLBACK_BASE_URL || 'http://localhost:3002'
+
 export const clients = [
   {
     id: 'clientId',
     secret: 'test',
-    redirectURIs: ['http://localhost:3002/auth/callback'],
+    redirectURIs: [`${callbackBaseUrl}/auth/callback`],
     scopes: [
       'openid',
       'profile',
