@@ -1,7 +1,6 @@
 import { SignJWT } from 'jose'
 import { randomUUID } from 'node:crypto'
 import { privateKey, publicJWK } from './keys.js'
-import { config } from '../../config/config.js'
 
 export const createToken = async ({ user, clientId, scope }) => {
   return await new SignJWT({
@@ -19,8 +18,8 @@ export const createToken = async ({ user, clientId, scope }) => {
       kid: publicJWK.kid
     })
     .setIssuedAt()
-    .setIssuer(`http://localhost:${config.get('port')}`)
-    .setAudience(`api://${clientId}`)
+    .setIssuer('https://login.microsoftonline.com/tenantId/v2.0')
+    .setAudience(clientId)
     .setExpirationTime('1h')
     .sign(privateKey)
 }
