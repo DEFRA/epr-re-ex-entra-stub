@@ -1,7 +1,7 @@
 import Boom from '@hapi/boom'
 import { randomUUID } from 'node:crypto'
 import { authCodes } from '../common/auth-codes.js'
-import { clients, postRedirectBaseUri } from '../common/clients.js'
+import { clients } from '../common/clients.js'
 import { users } from '../common/users.js'
 import { statusCodes } from '../common/constants/status-codes.js'
 import { oidcConfig } from '../common/oidc-config.js'
@@ -70,16 +70,26 @@ export const authorizeGet = {
 
 export const logoutGet = {
   method: 'GET',
-  path: '/logout',
+  path: '/{clientId}/logout',
   handler(request, h) {
-    const validatedRedirectUri =
-      postRedirectBaseUri === request.query.post_logout_redirect_uri
+    const { params } = request
+    const { clientId } = params
+
+    const client = clients.find((c) => c.id === clientId)
+
+    if (!client) {
+      throw Boom.badRequest('Invalid client_id')
+    }
+
+    const validatedRedirectUri = client.postLogoutRedirectURIs.find(
+      (uri) => uri === request.query.post_logout_redirect_uri
+    )
 
     if (!validatedRedirectUri) {
       throw Boom.badRequest('Invalid post_logout_redirect_uri')
     }
 
-    return h.redirect(request.query.post_logout_redirect_uri)
+    return h.redirect(validatedRedirectUri)
   }
 }
 
