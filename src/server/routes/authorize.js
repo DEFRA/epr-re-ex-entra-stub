@@ -19,6 +19,10 @@ const assertIsValidQuery = (query) => {
     throw Boom.badRequest('Invalid redirect_uri')
   }
 
+  if (typeof query.scope !== 'string') {
+    throw Boom.badRequest('Invalid scope parameter type')
+  }
+
   console.log('Scopes: ' + query.scope)
   for (const scope of query.scope.split(' ')) {
     if (!client.scopes.includes(scope)) {
@@ -68,6 +72,16 @@ export const logoutGet = {
   method: 'GET',
   path: '/logout',
   handler(request, h) {
+    const client = clients.find((c) => c.id === request.query.client_id)
+
+    if (!client) {
+      throw Boom.badRequest('Invalid client_id')
+    }
+
+    if (!client.redirectURIs.includes(request.query.post_logout_redirect_uri)) {
+      throw Boom.badRequest('Invalid post_logout_redirect_uri')
+    }
+
     return h.redirect(`${request.query.post_logout_redirect_uri}`)
   }
 }
@@ -75,7 +89,7 @@ export const logoutGet = {
 export const oidcConfigGet = {
   method: 'GET',
   path: '/.well-known/openid-configuration',
-  handler(request, h) {
+  handler(_request, h) {
     console.log(oidcConfig)
     return h.response(oidcConfig).code(statusCodes.ok)
   }
