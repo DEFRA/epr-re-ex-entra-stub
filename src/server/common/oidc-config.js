@@ -19,7 +19,7 @@ export const oidcConfig = {
     'id_token token'
   ],
   scopes_supported: ['openid', 'profile', 'email', 'offline_access'],
-  issuer: `${stubExternalUrl}/tenantId/v2.0`,
+  issuer: `https://login.microsoftonline.com/tenantId/v2.0`,
   request_uri_parameter_supported: false,
   userinfo_endpoint: 'https://graph.microsoft.com/oidc/userinfo',
   authorization_endpoint: `${stubExternalUrl}/authorize`,
