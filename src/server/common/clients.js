@@ -14,3 +14,5 @@ export const clients = [
     ]
   }
 ]
+
+export const postRedirectBaseUri = callbackBaseUrl + '/'
