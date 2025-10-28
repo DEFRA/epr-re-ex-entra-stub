@@ -78,11 +78,15 @@ export const logoutGet = {
       throw Boom.badRequest('Invalid client_id')
     }
 
-    if (!client.redirectURIs.includes(request.query.post_logout_redirect_uri)) {
+    const validatedRedirectUri = client.redirectURIs.find(
+      (uri) => uri === request.query.post_logout_redirect_uri
+    )
+
+    if (!validatedRedirectUri) {
       throw Boom.badRequest('Invalid post_logout_redirect_uri')
     }
 
-    return h.redirect(`${request.query.post_logout_redirect_uri}`)
+    return h.redirect(validatedRedirectUri)
   }
 }
 
