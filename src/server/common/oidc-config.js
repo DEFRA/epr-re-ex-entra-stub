@@ -26,7 +26,7 @@ export const oidcConfig = {
   device_authorization_endpoint: `${stubExternalUrl}/devicecode`,
   http_logout_supported: true,
   frontchannel_logout_supported: true,
-  end_session_endpoint: `${stubExternalUrl}/logout`,
+  end_session_endpoint: `${stubExternalUrl}/clientId/logout`,
   claims_supported: [
     'sub',
     'iss',

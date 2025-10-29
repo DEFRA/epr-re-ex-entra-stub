@@ -70,15 +70,18 @@ export const authorizeGet = {
 
 export const logoutGet = {
   method: 'GET',
-  path: '/logout',
+  path: '/{clientId}/logout',
   handler(request, h) {
-    const client = clients.find((c) => c.id === request.query.client_id)
+    const { params } = request
+    const { clientId } = params
+
+    const client = clients.find((c) => c.id === clientId)
 
     if (!client) {
       throw Boom.badRequest('Invalid client_id')
     }
 
-    const validatedRedirectUri = client.redirectURIs.find(
+    const validatedRedirectUri = client.postLogoutRedirectURIs.find(
       (uri) => uri === request.query.post_logout_redirect_uri
     )
 
