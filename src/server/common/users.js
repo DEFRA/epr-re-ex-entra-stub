@@ -19,5 +19,12 @@ export const users = [
     password: 'pass',
     name: 'NIEA Regulator',
     roles: ['EPR.Regulator']
+  },
+  {
+    id: 'ab20f4bd-d009-4bf4-b499-46e93e0f8890',
+    username: 'customer@test.gov.uk',
+    password: 'pass',
+    name: 'Regular Customer',
+    roles: ['EPR.Customer']
   }
 ]
