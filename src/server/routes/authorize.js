@@ -89,6 +89,9 @@ export const logoutGet = {
       throw Boom.badRequest('Invalid post_logout_redirect_uri')
     }
 
+    h.unstate('session', { path: '/' })
+    h.unstate('sessionId', { path: '/' })
+
     return h.redirect(validatedRedirectUri)
   }
 }

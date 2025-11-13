@@ -24,7 +24,7 @@ export const sign = {
     const token = await createToken({
       user,
       clientId,
-      scope: `openid profile email api://${clientId}/cw.backend`
+      scope: `openid profile email api://${clientId}/.default`
     })
 
     return {
