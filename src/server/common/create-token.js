@@ -8,7 +8,7 @@ export const createToken = async ({ user, clientId, scope }) => {
     sub: user.id,
     oid: user.id,
     name: user.name,
-    email: user.username,
+    preferred_username: user.username,
     roles: user.roles,
     nonce: randomUUID()
   })
