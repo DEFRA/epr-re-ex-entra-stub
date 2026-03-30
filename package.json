@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "7.29.2",
-    "@vitest/coverage-v8": "4.1.0",
+    "@vitest/coverage-v8": "4.1.2",
     "autoprefixer": "10.4.27",
     "babel-loader": "10.1.1",
     "cheerio": "1.2.0",
@@ -83,7 +83,7 @@
     "stylelint": "16.25.0",
     "stylelint-config-gds": "2.0.0",
     "terser-webpack-plugin": "5.4.0",
-    "vitest": "4.1.0",
+    "vitest": "4.1.2",
     "vitest-fetch-mock": "0.4.5",
     "webpack": "5.105.4",
     "webpack-assets-manifest": "6.5.1",
