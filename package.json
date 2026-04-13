@@ -96,7 +96,6 @@
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
-    },
-    "@hapi/content": "6.0.1"
+    }
   }
 }
