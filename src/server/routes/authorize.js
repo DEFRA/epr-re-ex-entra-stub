@@ -36,7 +36,7 @@ const assertIsValidQuery = (query) => {
 }
 
 export const authorizeGet = {
-  method: 'GET',
+  method: /** @type {const} */ ('GET'),
   path: '/authorize',
   handler(request, h) {
     assertIsValidQuery(request.query)
@@ -69,7 +69,7 @@ export const authorizeGet = {
 }
 
 export const logoutGet = {
-  method: 'GET',
+  method: /** @type {const} */ ('GET'),
   path: '/{clientId}/logout',
   handler(request, h) {
     const { params } = request
@@ -97,7 +97,7 @@ export const logoutGet = {
 }
 
 export const oidcConfigGet = {
-  method: 'GET',
+  method: /** @type {const} */ ('GET'),
   path: '/.well-known/openid-configuration',
   handler(_request, h) {
     console.log(oidcConfig)
@@ -106,7 +106,7 @@ export const oidcConfigGet = {
 }
 
 export const authorizePost = {
-  method: 'POST',
+  method: /** @type {const} */ ('POST'),
   path: '/authorize',
   handler(request, h) {
     assertIsValidQuery(request.query)

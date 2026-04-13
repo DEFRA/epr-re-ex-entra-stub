@@ -4,7 +4,7 @@ import { users } from '../common/users.js'
 import { createToken } from '../common/create-token.js'
 
 export const sign = {
-  method: 'POST',
+  method: /** @type {const} */ ('POST'),
   path: '/sign',
   async handler(request) {
     const { clientId, username } = request.payload

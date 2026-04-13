@@ -1,5 +1,5 @@
 export const health = {
-  method: 'GET',
+  method: /** @type {const} */ ('GET'),
   path: '/health',
   handler() {
     return {
