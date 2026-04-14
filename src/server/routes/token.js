@@ -4,7 +4,7 @@ import { clients } from '../common/clients.js'
 import { createToken } from '../common/create-token.js'
 
 export const token = {
-  method: 'POST',
+  method: /** @type {const} */ ('POST'),
   path: '/token',
   async handler(request) {
     const {
