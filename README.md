@@ -23,7 +23,7 @@ Use supported version of Node:
 nvm use
 ```
 
-Install dependencies:
+Install dependencies test:
 
 ```bash
 npm install
