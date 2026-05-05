@@ -98,7 +98,6 @@
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
-    },
-    "postcss": "8.5.10"
+    }
   }
 }
