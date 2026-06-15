@@ -98,6 +98,8 @@
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
-    }
+    },
+    "joi": "18.2.1",
+    "postcss-selector-parser": "7.1.4"
   }
 }
