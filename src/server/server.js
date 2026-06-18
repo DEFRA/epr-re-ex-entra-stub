@@ -5,6 +5,7 @@ import { secureContext } from '@defra/hapi-secure-context'
 
 import { config } from '../config/config.js'
 import { pulse } from './common/helpers/pulse.js'
+import { metrics } from '@defra/cdp-metrics'
 import { catchAll } from './common/helpers/errors.js'
 import { nunjucksConfig } from '../config/nunjucks/nunjucks.js'
 import { setupProxy } from './common/helpers/proxy/setup-proxy.js'
@@ -60,6 +61,7 @@ export async function createServer() {
   await server.register([
     requestLogger,
     requestTracing,
+    metrics,
     secureContext,
     pulse,
     nunjucksConfig,
