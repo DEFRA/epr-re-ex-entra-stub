@@ -64,7 +64,8 @@
     "undici": "7.24.5"
   },
   "devDependencies": {
-    "@babel/preset-env": "7.29.2",
+    "@babel/core": "8.0.1",
+    "@babel/preset-env": "8.0.2",
     "@vitest/coverage-v8": "4.1.0",
     "autoprefixer": "10.4.27",
     "babel-loader": "10.1.1",
