@@ -1,5 +1,5 @@
 [tools]
-node = "22.16.0"
+node = "22.23.1"
 
 [settings]
 minimum_release_age = "3d"
