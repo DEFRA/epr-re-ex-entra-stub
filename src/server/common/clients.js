@@ -16,6 +16,10 @@ export const clients = [
       'offline_access',
       'api://clientId/.default'
     ],
-    postLogoutRedirectURIs: [`${callbackBaseUrl}/`, `${callbackEprUrl}/`]
+    postLogoutRedirectURIs: [
+      `${callbackBaseUrl}/`,
+      `${callbackEprUrl}/`,
+      `${callbackEprUrl}/auth/logout`
+    ]
   }
 ]
