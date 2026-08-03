@@ -26,5 +26,12 @@ export const users = [
     password: 'pass',
     name: 'Regular Customer',
     roles: ['EPR.Customer']
+  },
+  {
+    id: '0a15d71b-e7ad-44c8-ad81-9c1686f22112',
+    username: 'standard.regulator@test.gov.uk',
+    password: 'pass',
+    name: 'Standard Regulator EPR frontend',
+    roles: ['Waste.Regulator.Standard']
   }
 ]
