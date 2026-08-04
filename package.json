@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "type": "module",
   "engines": {
-    "node": "^24.18.0"
+    "node": "^24.18.1"
   },
   "scripts": {
     "build:frontend": "NODE_ENV=production webpack",
@@ -88,7 +88,7 @@
     "typescript": "7.0.2",
     "vitest": "4.1.10",
     "vitest-fetch-mock": "0.4.5",
-    "webpack": "5.109.0",
+    "webpack": "5.109.1",
     "webpack-assets-manifest": "6.5.2",
     "webpack-cli": "7.2.1"
   },
