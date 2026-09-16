@@ -20,6 +20,20 @@ updates:
           - '@babel/*'
           - 'babel-loader'
 
+      # vitest and @vitest/coverage-v8 require matching versions (strict peer
+      # dependency) — group them (incl. majors) so a bump to one always lands
+      # with the other, instead of two PRs that each break npm ci alone
+      vitest:
+        applies-to: 'version-updates'
+        update-types:
+          - 'major'
+          - 'minor'
+          - 'patch'
+        patterns:
+          - 'vitest'
+          - '@vitest/*'
+          - 'vitest-fetch-mock'
+
       dev:
         applies-to: 'version-updates'
         dependency-type: 'development'
