@@ -88,7 +88,7 @@
     "typescript": "7.0.2",
     "vitest": "5.0.0",
     "vitest-fetch-mock": "0.4.5",
-    "webpack": "5.110.3",
+    "webpack": "5.111.0",
     "webpack-assets-manifest": "6.5.2",
     "webpack-cli": "7.2.3"
   },
