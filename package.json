@@ -79,7 +79,7 @@
     "postcss-load-config": "6.0.1",
     "postcss-loader": "8.2.1",
     "prettier": "3.9.10",
-    "sass-embedded": "1.105.2",
+    "sass-embedded": "1.106.1",
     "sass-loader": "17.0.1",
     "source-map-loader": "5.0.0",
     "stylelint": "17.16.0",
@@ -88,8 +88,8 @@
     "typescript": "7.0.2",
     "vitest": "5.0.5",
     "vitest-fetch-mock": "0.4.5",
-    "webpack": "5.112.0",
-    "webpack-assets-manifest": "6.5.4",
+    "webpack": "5.112.1",
+    "webpack-assets-manifest": "6.5.5",
     "webpack-cli": "7.2.3"
   },
   "overrides": {
