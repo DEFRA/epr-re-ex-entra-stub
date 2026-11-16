@@ -94,7 +94,8 @@
   },
   "overrides": {
     "neostandard": {
-      "eslint": "$eslint"
+      "eslint": "$eslint",
+      "minimatch": "11.0.1"
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
@@ -103,6 +104,10 @@
       "minimatch": {
         "brace-expansion": "1.1.21"
       }
+    },
+    "joi": "18.3.1",
+    "nodemon": {
+      "minimatch": "11.0.1"
     }
   }
 }
