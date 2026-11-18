@@ -108,9 +108,6 @@
     "joi": "18.3.1",
     "nodemon": {
       "minimatch": "11.0.8"
-    },
-    "cheerio": {
-      "undici": "7.30.2"
     }
   }
 }
