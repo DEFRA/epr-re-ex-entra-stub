@@ -95,7 +95,7 @@
   "overrides": {
     "neostandard": {
       "eslint": "$eslint",
-      "minimatch": "11.0.1"
+      "minimatch": "11.0.8"
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
@@ -107,7 +107,7 @@
     },
     "joi": "18.3.1",
     "nodemon": {
-      "minimatch": "11.0.1"
+      "minimatch": "11.0.8"
     }
   }
 }
