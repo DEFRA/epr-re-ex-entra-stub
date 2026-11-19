@@ -50,11 +50,11 @@
     "cssnano": "9.9.0",
     "cssnano-preset-default": "9.8.0",
     "date-fns": "4.4.0",
-    "global-agent": "4.1.6",
+    "global-agent": "4.1.7",
     "govuk-frontend": "6.6.0",
     "hapi-pino": "13.0.0",
     "hapi-pulse": "4.0.0",
-    "jose": "6.2.15",
+    "jose": "6.2.16",
     "lodash": "4.18.1",
     "node-fetch": "3.3.2",
     "nunjucks": "3.2.4",
@@ -63,7 +63,7 @@
     "undici": "8.12.4"
   },
   "devDependencies": {
-    "@babel/core": "8.1.0",
+    "@babel/core": "8.1.2",
     "@babel/preset-env": "8.0.7",
     "@vitest/coverage-v8": "5.1.0",
     "autoprefixer": "10.6.2",
@@ -78,8 +78,8 @@
     "npm-run-all": "4.1.5",
     "postcss-load-config": "6.0.1",
     "postcss-loader": "8.2.1",
-    "prettier": "3.9.10",
-    "sass-embedded": "1.108.1",
+    "prettier": "3.10.1",
+    "sass-embedded": "1.108.2",
     "sass-loader": "17.1.0",
     "source-map-loader": "5.0.0",
     "stylelint": "17.16.0",
@@ -95,7 +95,7 @@
   "overrides": {
     "neostandard": {
       "eslint": "$eslint",
-      "minimatch": "11.0.1"
+      "minimatch": "11.0.8"
     },
     "stylelint-config-gds": {
       "stylelint": "$stylelint"
@@ -107,7 +107,7 @@
     },
     "joi": "18.3.1",
     "nodemon": {
-      "minimatch": "11.0.1"
+      "minimatch": "11.0.8"
     }
   }
 }
